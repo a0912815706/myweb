@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>童趣MENU</title>
+    <style>
+      
+        /* 米字是萬用字元符號 => 所有的HTML標籤 */
+        * {
+            /* 取消預設邊界 */
+            margin: 0;
+            /* 取消預設縮排 */
+            padding: 0;
+            /* 字型 */
+            font-family: 'Times New Roman', Times, serif;
+            /* font-family: '微軟正黑體'; */
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: auto;
+        }
+
+        /* 
+            body背景色=>#f2e9c6
+            nav背景色=>#795d59
+            nav按鈕色=>#cab29c
+            info背景色=>#a39466
+            footer背景色=>#514133
+        */
+
+        body {
+            background-color: #f7f5f2;
+        }
+
+
+        /* 頁首區 */
+        .header {
+            /* border: 1px solid red; */
+            /* 背景圖 */
+            background-image: url("./img/banner_bg.jpg");
+            width: 1200px;
+            height: 400px;
+            /* 定位基準點 */
+            position: relative;
+        }
+
+        /* 頁首區-左側logo */
+        /* 複合式規則 => 超過二個以上的規則名稱（包含二個） */
+        .header h2 {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+
+        /* 頁首區-右側超連結清單水平排列 */
+        .menu ul li {
+            /* border: 1px solid red; */
+            margin-right: 20px;
+            list-style: none;
+            float: right;
+        }
+
+        /* 頁首區-右側超連結色彩 */
+        .menu ul li a {
+            color: #273844;
+        }
+
+        /* 第一層 */
+        .menu ul {
+            /* border: 1px solid red; */
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+        }
+
+        .menu li {
+            /* border: 1px solid red; */
+            color: rgb(146, 129, 129);
+            list-style: none;
+            float: right;
+        }
+
+
+        /* 第一層li被碰到時，顯示第二層選單 */
+        .menu li:hover ul {
+            display: block;
+        }
+
+        .menu a {
+            /* border: 1px solid red; */
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            /*行高值=高度值 => 垂直置中*/
+            text-decoration: none;
+            text-align: center;
+            transition: all .3s;
+        }
+
+        .menu a:hover {
+
+            background-color: rgb(146, 129, 129);
+            color: #fff;
+            font-weight: bold;
+
+        }
+
+        /* 第二層 */
+        .menu ul ul {
+            /* border: 1px solid red; */
+            /* 處理定位推擠問題 */
+            position: absolute;
+            /* 不顯示 */
+            display: none;
+
+        }
+
+        .menu li li {
+
+            /* 取消浮動，改回垂直排列 */
+            clear: right;
+        }
+
+
+
+        /* 選單區 */
+        .nav {
+            /* border: 1px solid red; */
+            width:1200px;
+            background-color: #efece6;
+            text-align: center;
+            margin: auto;
+
+        }
+
+        .nav ul {
+            /* border: 1px solid red; */
+            list-style: none;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .nav ul li {
+            /* border: 1px solid red; */
+            /* 水平排列 */
+            display: inline;
+        }
+
+        /* 選單區超連結 */
+        .nav ul li a {
+            /* border: 1px solid red; */
+            color: #eff1e5;
+            background-color: #9b9b6e;
+            text-decoration: none;
+            /* 內間距(縮排) => padding */
+            /* 順時針方向設定 */
+            /* padding: 10px 20px 10px 20px; */
+            padding: 10px 20px;
+            /* 圓角 */
+            border-radius: 5px;
+
+            /* 外間距 => margin */
+            margin-left: 10px;
+        }
+
+        /* 選單區超連結被碰到時的變化 */
+        .nav ul li a:hover {
+            background-color: rgb(106, 130, 151);
+            color: #bdb284;
+        }
+
+
+
+
+
+
+        /* 內容區 */
+        .content {
+            /* border: 1px solid red; */
+            width:1200px;
+            background-color: #948a8a;
+            /* 內容置中 */
+            text-align: center;
+            /* 放大字體 */
+            font-size: 30px;
+            margin: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            color: #dbddca;
+
+            /* border: 1px solid red; */
+
+        }
+
+
+        .content p {
+            /* 行距 */
+            line-height: 2;
+        }
+
+
+        /* 資訊區 */
+        .info {
+            /* border: 1px solid red; */
+            background-color: #dbddca;
+            margin: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+            width: 1200px;
+            height: 1220px;
+            flex-wrap: wrap;
+        }
+
+        .info .box {
+            /* border: 1px solid red;  */
+            display: inline-block;
+            background-color: bisque;
+            padding: 20px;
+            margin: 20px;
+            transition: all .5s;
+            text-align: center;
+
+            /* 陰影效果 */
+            /* box-shadow: 水平位置 垂直位置 模糊度 陰影色彩; */
+            /* box-shadow: 10px -10px 10px #000; */
+
+            /* 上下左右都有陰影區 */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 碰到色塊 */
+        .box:hover {
+            transform: scale(1.2);
+
+        }
+
+        .box img {
+            width: 300px;
+            height: 300px;
+            transition: all .5s;
+        }
+
+        /* 碰到色塊時的圖片效果 */
+        .box:hover img {
+            border-radius: 50%;
+        }
+
+        /* 頁尾區 */
+        #footer {
+            width:1160px;
+            margin: auto;
+            background-color: #a29898;
+            color: #1d1919;
+            padding: 10px;
+            padding: 5px 20px;
+            text-align: center;
+            
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 最外層外框 -->
+    <div class="wrap">
+        <!-- 頁首區 -->
+        <div class="header">
+            <!-- 左側LOGO -->
+            <h2>
+                <img src="./img/logo.png" alt="">
+            </h2>
+
+            <!-- 下拉選單 -->
+            <div class="menu">
+                <!-- 第一層 -->
+                <ul>
+                    <li><a href="./contact1.html">CONTACT</a></li>
+                    
+
+                    <li>
+                        <a href="#">MENU</a>
+
+                        <!-- 第二層 -->
+                        <ul>
+                            <li>
+                                <a href="./menu1.html">傳說中的。古早</a>
+                            </li>
+
+                            <li>
+                                <a href="./menu2.html">不要鬧了。童趣</a>
+                            </li>
+
+                            <li>
+                                <a href="./menu3.html">加倍滿溢。幸福</a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    
+
+                    <li><a href="./index.html">NEWS</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 選單區 -->
+    <div class="nav">
+        <ul>
+
+            <li><a href="./about1.html">關於皓雪</a></li>
+            <li><a href="./index.html">最新消息</a></li>
+            <li><a href="./story1.html">品牌故事</a></li>
+            <li><a href="./contact1.html">聯絡我們</a></li>
+
+        </ul>
+    </div>
+    <!-- 內容區 -->
+    <div class="content">
+
+        <!-- 標題 -->
+        <h2>MENU</h2>
+        <h2>不要鬧了。童趣</h2>
+
+
+
+
+
+    </div>
+    <!-- 資訊區 -->
+    <div class="info">
+
+        <div class="box">
+            <p><img src="./img/q1.jpg" alt=""></p>
+            <h3>不要鬧了。童趣1</h3>
+        </div>
+
+        <div class="box">
+            <p><img src="./img/q2.jpg" alt=""></p>
+            <h3>不要鬧了。童趣2</h3>
+        </div>
+
+        <div class="box">
+            <p><img src="./img/q3.jpg" alt=""></p>
+            <h3>不要鬧了。童趣3</h3>
+        </div>
+
+
+
+        <div class="box">
+            <p><img src="./img/q4.jpg" alt=""></p>
+            <h3>不要鬧了。童趣4</h3>
+        </div>
+
+        <div class="box">
+            <p><img src="./img/q5.jpg" alt=""></p>
+            <h3>不要鬧了。童趣5</h3>
+        </div>
+
+        <div class="box">
+            <p><img src="./img/q6.jpg" alt=""></p>
+            <h3>不要鬧了。童趣6</h3>
+        </div>
+
+
+
+        <div class="box">
+            <p><img src="./img/q7.jpg" alt=""></p>
+            <h3>不要鬧了。童趣7</h3>
+        </div>
+
+        <div class="box">
+            <p><img src="./img/q8.jpg" alt=""></p>
+            <h3>不要鬧了。童趣8</h3>
+        </div>
+
+        <div class="box">
+            <p><img src="./img/q9.jpg" alt=""></p>
+            <h3>不要鬧了。童趣9</h3>
+        </div>
+
+
+
+
+        <!-- 下文字 -->
+        <!-- <p>憶在時光隧道裡 -->
+        <!-- 豆花像小白雲一樣輕盈 -->
+        <!-- 配上甜蜜糖水 -->
+        <!-- 舌尖瞬間飛到童年！</p> -->
+        <!-- <p>碗裡精靈般舞動的豆花 -->
+        <!-- 搭配色彩繽紛配料與蜜糖 -->
+        <!-- 瞬間讓大小朋友們 -->
+        <!-- 讚不絕口！</p> -->
+        <!-- <p>幸福豆花 香濃郁 甜而不膩 -->
+        <!-- 一口滑嫩入口 -->
+        <!-- 煩惱瞬間溶化 -->
+        <!-- 滿嘴幸福直冒泡 !</p> -->
+        <!-- <p>在每一次舌尖的碰撞中 都能感受到彼此的心跳和那份不可言喻的甜蜜</p> -->
+        <!-- <p>所有人的故事也隨著每一碗糖水慢慢流淌 直到永遠</p> -->
+
+
+
+        <!-- 上圖 -->
+        <!-- alt:替代文字（當圖片來源不存在時，會出現的內容） -->
+
+
+        <!-- <p><img src="./img/223.jpg" alt=""></p> -->
+
+
+
+
+
+
+
+    </div>
+    <!-- 頁尾區 -->
+    <div id="footer">
+        <p>關於我 | 留言版 | 豆花團</p>
+        <p>SINCE 2024 首發創想</p>
+        <p>技術提供 COFFEETEACHER 。 網站架設 AKEMI</p>
+        <h4>Copyright &copy; HaoSnow Dessert Shop 皓雪糖水舖 All Rights Reserved.Designed by CYBERBIZ.</h4>
+        <!-- <h4>&copy; 2024 AKEMI 版權所有. All right reserved.</h4> -->
+
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

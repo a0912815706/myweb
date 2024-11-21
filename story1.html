@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌故事</title>
+    <!-- 設定CSS外部連結檔案 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        /* 第一層 */
+        .menu1 ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu1 li {
+            list-style: none;
+            float: right;
+        }
+
+        /* 第一層li被碰到時，顯示第二層選單 */
+        .menu1 li:hover ul {
+            display: block;
+        }
+
+        .menu1 a {
+            /* border: 1px solid rgb(208, 255, 0); */
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            /*行高值=高度值 => 垂直置中*/
+            background-color: transparent;
+            color: rgb(21, 21, 41);
+            text-decoration: none;
+            text-align: center;
+            transition: all .3s;
+        }
+
+        .menu1 a:hover {
+            background-color: rgb(146, 129, 129);
+            color: rgb(155, 146, 146);
+            font-weight: bold;
+        }
+
+        /* 第二層 */
+        .menu1 ul ul {
+            /* border: 1px solid red; */
+            /* 處理定位推擠問題 */
+            position: absolute;
+            /* 不顯示 */
+            display: none;
+        }
+
+        .menu1 li li {
+            /* 取消浮動，改回垂直排列 */
+            clear: right;
+            /* display: flex; */
+            /* flex-direction: row; */
+            /* justify-content: space-between; */
+            /* align-items: center; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 最外層外框 -->
+    <div class="wrap">
+        <!-- 頁首區 -->
+        <div class="header">
+            <!-- 左側LOGO -->
+            <h2>
+                <img src="./img/logo.png" alt="">
+            </h2>
+            <!-- 下拉選單 -->
+            <div class="menu1">
+                <!-- 第一層 -->
+                <ul>
+                    <li><a href="./contact1.html">CONTACT</a></li>
+                    <li>
+                        <a href="#">MENU</a>
+                        <!-- 第二層 -->
+                        <ul>
+                            <li>
+                                <a href="./menu1.html">傳說中的。古早</a>
+                            </li>
+                            <li>
+                                <a href="./menu2.html">不要鬧了。童趣</a>
+                            </li>
+                            <li>
+                                <a href="./menu3.html">加倍滿溢。幸福</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="./index.html">NEWS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 選單區 -->
+        <div class="nav">
+            <ul>
+
+                <li><a href="./about1.html">關於皓雪</a></li>
+                <li><a href="./index.html">最新消息</a></li>
+                <li><a href="./story1.html">品牌故事</a></li>
+                <li><a href="./contact1.html">聯絡我們</a></li>
+
+            </ul>
+        </div>
+
+        <!-- 左側項目內容區 -->
+        <div id="content">
+            <!-- 日期 -->
+            <!-- <div class="date"> -->
+            <!-- <span>21</span>NOV -->
+            <!-- </div> -->
+            <!-- 文章標題 -->
+            <h2>品牌故事</h2>
+            <!-- 類別 -->
+            <div class="cat">
+                皓雪糖煮 <a href="#">HS豆花。豆花專賣店。</a>
+            </div>
+
+            <!-- 文章圖片 -->
+
+            <p>
+                <!-- <img src="https://picsum.photos/80?random=1"> -->
+                <!-- <img src="https://picsum.photos/300/200"> -->
+                <!-- <img src="https://picsum.photos/200"> -->
+                <img src="./img/story04.jpg" alt="">
+            </p>
+            <!-- 文章內容 -->
+
+            <p>「皓雪糖水舖」
+                
+                是一家主打傳統豆花和糖水甜品的品牌，專注於傳承與創新結合，致力於讓顧客在現代化的城市中，也能品味到傳統甜品的古早風味。
+
+                品牌創辦的初衷源於對古早味甜品喜愛的情懷。在每次品嘗豆花、糖水等甜品時給人們的溫暖感受。帶著對這份傳統滋味的熱愛，創辦人決定以「皓雪」作為品牌名，象徵如皓潔白雪般的豆花，清新、自然又純淨。</p>
+
+            <p>「產品特點」:
+
+                皓雪糖水舖的豆花堅持每日手工製作，選用當季新鮮食材，不添加防腐劑，強調健康與原味。豆花滑嫩細緻，入口即化，搭配多種糖水口味，從傳統糖水漿汁，到創新的繽紛視覺等，滿足各種口味偏好的顧客。</p>
+
+            <p>「品牌使命」：
+
+                秉持著「溫暖人心」的品牌使命，希望每一碗豆花都能為顧客帶來一份美好時光，不僅是甜品，更是情感的傳遞。無論是炎炎夏日還是寒冷冬季，皓雪糖水舖的豆花都能帶來清涼或暖心的體驗，成為人們生活中小而美的幸福。
+
+                透過創新與堅守傳統的豆花，為顧客提供一碗碗充滿情感和溫度的甜品，讓更多人認識這份來自家鄉的甜美。</p>
+
+
+
+        </div>
+        <!-- 右側項目清單 -->
+        <div id="sidebar">
+
+            <!-- 清單圖片 -->
+            <p>
+                <img src="./img/right.jpg" alt="">
+            </p>
+
+
+            <!-- 文章分類清單 -->
+            <div class="menu">
+                <h3>皓雪糖煮</h3>
+                <ul>
+                    <li><a href="./about1.html">關於皓雪</a></li>
+                    <li><a href="./index.html">最新消息</a></li>
+                    <li><a href="./story1.html">品牌故事</a></li>
+                    <li><a href="./contact1.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <!-- 最新文章清單 -->
+            <div class="menu">
+                <h3>經典超值</h3>
+                <ul>
+                    <!-- <li><a href="#">熱銷商品</a></li> -->
+                    <!-- <li><a href="#">檔期活動</a></li> -->
+                    <li><a href="./menu1.html">傳說中的。古早</a></li>
+                    <li><a href="./menu2.html">不要鬧了。童趣</a></li>
+                    <li><a href="./menu3.html">加倍滿溢。幸福</a></li>
+                    <!-- <li><a href="#">聯絡我們</a></li> -->
+                </ul>
+            </div>
+
+
+
+            <!-- 清單圖片 -->
+            <p>
+                <img src="./img/beans.png" alt="">
+            </p>
+
+
+
+
+
+
+
+        </div>
+        <!-- 頁尾區 -->
+        <div id="footer">
+            <p>關於我 | 留言版 | 豆花團</p>
+            <p>SINCE 2024 首發創想</p>
+            <p>技術提供 COFFEETEACHER 。 網站架設 AKEMI</p>
+            <h4>Copyright &copy; HaoSnow Dessert Shop 皓雪糖水舖 All Rights Reserved.Designed by CYBERBIZ.</h4>
+            <!-- <h4>&copy; 2024 AKEMI 版權所有. All right reserved.</h4> -->
+
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

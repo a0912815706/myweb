@@ -1,0 +1,498 @@
+/* 共同部分設定 */
+* {
+    /* 以下3指令 間距拿掉 項目符號拿掉 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* 統一字形 */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    /* 縮小尺寸 */
+    margin: 24px;
+    /* 輔助紅框線 */
+    /* border: 1px solid red;  */
+}
+
+/* 各區塊的間隔 */
+/* 首頁區 */
+/* 左側內容區 */
+/* 右側清單區 */
+
+
+
+#header,
+#content,
+#sidebar {
+    margin-bottom: 50px;
+}
+
+
+/* 圖片 */
+img {
+    /* 圖片寬度>視窗寬度=>圖片會自動縮放到視窗的寬度 */
+    /* 圖片寬度<視窗寬度=>圖片維持原寬度 */
+    max-width: 100%;
+
+}
+
+/* 最外層 */
+.wrap {
+    /* border: 1px solid red; */
+    width: 960px;
+    margin: auto;
+}
+
+
+
+/* 米字是萬用字元符號 => 所有的HTML標籤 */
+* {
+    /* 取消預設邊界 */
+    margin: 0;
+    /* 取消預設縮排 */
+    padding: 0;
+    /* 字型 */
+    font-family: 'Times New Roman', Times, serif;
+    /* font-family: '微軟正黑體'; */
+}
+
+.wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+/* 
+             body背景色=>#f2e9c6
+             nav背景色=>#795d59
+             nav按鈕色=>#cab29c
+             info背景色=>#a39466
+             footer背景色=>#514133
+         */
+
+body {
+    background-color: #f7f5f2;
+}
+
+
+/* 頁首區 */
+.header {
+    /* border: 1px solid red; */
+    /* 背景圖 */
+    background-image: url("../img/banner_bg.jpg");
+    width: 1200px;
+    height: 400px;
+    /* 定位基準點 */
+    position: relative;
+}
+
+/* 頁首區-左側logo */
+/* 複合式規則 => 超過二個以上的規則名稱（包含二個） */
+.header h2 {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+/* 頁首區-右側超連結 */
+.header hl {
+    /* 絕對定位 */
+    position: absolute;
+    right: 20px;
+    top: 50px;
+
+    /* 取消項目符號 */
+    /* list-style: none; */
+}
+
+/* 頁首區-右側超連結清單水平排列 */
+.header ul li {
+    /* border: 1px solid red; */
+    float: right;
+    /* display: inline; */
+    margin-right: 20px;
+    list-style: none;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+/* 頁首區-右側超連結色彩 */
+.header ul li a {
+    color: #273844;
+}
+
+/* 選單區 */
+.nav {
+    /* border: 1px solid red; */
+    background-color: #efece6;
+    text-align: center;
+}
+
+
+.nav ul {
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav ul li {
+    /* 水平排列 */
+    display: inline;
+
+}
+
+/* 選單區超連結 */
+.nav ul li a {
+    color: #eff1e5;
+    background-color: #9b9b6e;
+    text-decoration: none;
+    /* 內間距(縮排) => padding */
+    /* 順時針方向設定 */
+    /* padding: 10px 20px 10px 20px; */
+    padding: 10px 20px;
+    /* 圓角 */
+    border-radius: 5px;
+
+    /* 外間距 => margin */
+    margin-left: 10px;
+}
+
+/* 選單區超連結被碰到時的變化 */
+.nav ul li a:hover {
+    background-color: rgb(106, 130, 151);
+    color: #bdb284;
+}
+
+/* 內容區 */
+.content {
+
+    background-color: #95866d;
+    /* 內容置中 */
+    text-align: center;
+    /* 放大字體 */
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: #cbc7a2;
+}
+
+.content p {
+    /* 行距 */
+    line-height: 2;
+
+}
+
+/* 資訊區 */
+.info {
+
+  
+    background-color: #f6f3f1;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.info .box {
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+.info .box img {
+    /* 圓形=>寬度的一半(相對單位%) */
+    border-radius: 50%;
+    border: 5px solid #fcfcf7;
+}
+
+.info .box h3 {
+    color: #343030;
+    font-size: 18px;
+}
+
+/* 頁尾區 */
+.footer {
+    background-color: #d6cbb5;
+    color: #201f15;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+
+/* 對位的方法 */
+/* border: 1px solid red; */
+/* 浮動的方法 */
+
+
+/* 頁首區 */
+#logo {
+    float: left;
+}
+
+#logo h1 {
+    line-height: 1;
+}
+
+#iconmenu {
+    float: right;
+    margin-bottom: 10px;
+}
+
+#iconmenu ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+/* 選單 */
+#nav {
+    /* border: 1px solid red; */
+    background-color: #000;
+    /* 因為浮動導致高度消失,所以使用下列方式把高度抓回來 */
+    overflow: hidden;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+
+}
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-right: 1px solid #fff;
+    display: block;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#nav li {
+    float: left;
+}
+
+#nav a:hover {
+    background-color: skyblue;
+    color: #333;
+}
+
+/* 左側內容區 */
+#content {
+    background-color: rgb(196, 196, 176);
+    width: 550px;
+    width: 60%;
+    float: left;
+
+}
+
+/* 左側內容區日期 */
+.date {
+
+    /* 底色 */
+    background-color: rgb(87, 209, 239);
+    /* 字色 */
+    color: #110d21;
+    /* 圓角 */
+    border-radius: 50%;
+    /* 靠右對齊 */
+    float: right;
+    /* 上下左右 */
+    padding: 1px 20px;
+    /* 行距 */
+    line-height: 1;
+
+    /* 行距調整撐開加大距離 */
+    line-height: 2.5;
+
+    /* 置中 */
+    text-align: center;
+    /* 字體加粗 */
+    font-weight: bold;
+    /* 字的大小 */
+    font-size: 25px;
+
+
+
+}
+
+/* 月與日 堆疊 換行 */
+.date span {
+    /* 推疊排列 */
+    display: block;
+    /* 字體加大 */
+    font-size: 28px;
+    /* 行距 */
+    line-height: 1;
+}
+
+/* 內容標題 */
+#content h2 {
+
+
+
+    /* 行距調整撐開加大距離 */
+    line-height: 2.5;
+
+    /* width:100px;  線段長度 */
+    border-bottom: 3px solid #211414;
+    padding-bottom: 6px;
+    /* 輔助紅框線 檢視 */
+    /* border: 1px solid red; */
+    margin-bottom: 6px;
+    /* 置中 */
+    text-align: center;
+    /* 字的大小 */
+    font-size: 40px;
+
+
+
+
+
+
+}
+
+/* 內容類別 */
+.cat {
+
+
+
+    font-size: 14px;
+    color: #211414;
+
+    /* 輔助紅框線 檢視 */
+    /* border: 1px solid red;   */
+    margin-bottom: 10px;
+
+    /* 置中 */
+    text-align: left;
+    /* 字的大小 */
+    font-size: 20px;
+
+
+
+
+}
+
+/* 內容類別中的超連結 */
+
+
+.cat a {
+
+    
+
+    /* 字顏色 */
+    color: #281a1a;
+    /* 拿掉超連結&底線 */
+    text-decoration: none;
+}
+
+/* 內容段落 */
+#content p {
+    /* 行距調整撐開加大距離 */
+    line-height: 2;
+    /* 內容的字 左右對齊 */
+    text-align: justify;
+    /* 段落最下方 加大留白區 */
+    margin-bottom: 10px;
+    /* 字的大小 */
+    font-size: 20px;
+}
+
+#content img {
+
+
+
+    /* 圖片加大 內容區的寬度百分之百 */
+    width: 100%;
+
+}
+
+.menu {
+    /* 輔助紅框線 檢視 */
+    /* border: 1px solid red;   */
+    margin-bottom: 50px;
+
+    
+
+
+
+}
+
+.menu h3 {
+    font-size: 26px;
+    color: rgb(151, 223, 241);
+    margin-bottom: 6px;
+}
+
+.menu ul {
+    /* 輔助紅框線 檢視 */
+    /* border: 1px solid red;   */
+    border-top: 1px solid #ccc;
+}
+
+.menu li {
+    /* 一條虛線 */
+    border-bottom: 1px dashed #000;
+}
+
+/* 右側清單中的超連結 */
+.menu li a {
+    /* 超連結轉成區塊元素 */
+    display: block;
+    color: #999;
+    text-decoration: none;
+    padding: 10px;
+    /* 加上清單的項目icon*/
+    /* 回到上一層 (../) */
+    /* 同一層 (./) */
+    background-image: url("../img/listmark.png");
+    background-repeat: no-repeat;
+    /* background-position: 先水平 再垂直 ;  */
+    background-position: left 50%;
+    /* 調整改變字的位置 */
+    padding-left: 20px;
+
+}
+
+.menu li:hover a {
+
+
+    background-color: rgb(162, 148, 112);
+    color: #272222;
+    font-weight: bold;
+
+
+
+}
+
+
+
+
+/* 右側清單區 */
+#sidebar {
+
+
+
+    /* background-color: rgb(247, 255, 175); */
+    /* width: 300px */
+    width: 35%;
+    float: right;
+
+
+
+
+}
+
+/* 頁尾區 */
+#footer {
+
+
+    clear: both;
+    background-color: #a29898;
+    color: #1d1919;
+    padding: 10px;
+    /* padding: 30px 10px 30px 10px; */
+    padding: 5px 20px;
+    text-align: center;
+    /* padding-top: 20px; */
+
+}

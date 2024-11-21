@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>最新消息NEWS</title>
+    <!-- 設定CSS外部連結檔案 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        /* 第一層 */
+        .menu1 ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu1 li {
+            
+            list-style: none;
+            float: right;
+        }
+
+        /* 第一層li被碰到時，顯示第二層選單 */
+        .menu1 li:hover ul {
+            display: block;
+        }
+
+        .menu1 a {
+            /* border: 1px solid rgb(208, 255, 0); */
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            /*行高值=高度值 => 垂直置中*/
+            background-color: transparent;
+            color: rgb(21, 21, 41);
+            text-decoration: none;
+            text-align: center;
+            transition: all .3s;
+        }
+
+        .menu1 a:hover {
+            background-color: rgb(146, 129, 129);
+            color: rgb(155, 146, 146);
+            font-weight: bold;
+        }
+
+        /* 第二層 */
+        .menu1 ul ul {
+            /* border: 1px solid red; */
+            /* 處理定位推擠問題 */
+            position: absolute;
+            /* 不顯示 */
+            display: none;
+        }
+
+        .menu1 li li {
+            /* 取消浮動，改回垂直排列 */
+            clear: right;
+            /* display: flex; */
+            /* flex-direction: row; */
+            /* justify-content: space-between; */
+            /* align-items: center; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 最外層外框 -->
+    <div class="wrap">
+        <!-- 頁首區 -->
+        <div class="header">
+            <!-- 左側LOGO -->
+            <h2>
+                <img src="./img/logo.png" alt="">
+            </h2>
+            <!-- 下拉選單 -->
+            <div class="menu1">
+                <!-- 第一層 -->
+                <ul>
+                    <li><a href="./contact1.html">CONTACT</a></li>
+
+                    <li>
+                        <a href="#">MENU</a>
+                        <!-- 第二層 -->
+                        <ul>
+                            <li>
+                                <a href="./menu1.html">傳說中的。古早</a>
+                            </li>
+
+                            <li>
+                                <a href="./menu2.html">不要鬧了。童趣</a>
+                            </li>
+
+                            <li>
+                                <a href="./menu3.html">加倍滿溢。幸福</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="./index.html">NEWS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 選單區 -->
+        <div class="nav">
+            <ul>
+
+                <li><a href="./about1.html">關於皓雪</a></li>
+                <li><a href="./index.html">最新消息</a></li>
+                <li><a href="./story1.html">品牌故事</a></li>
+                <li><a href="./contact1.html">聯絡我們</a></li>
+
+            </ul>
+        </div>
+
+        <!-- 左側項目內容區 -->
+        <div id="content">
+            <!-- 日期 -->
+            <!-- <div class="date"> -->
+            <!-- <span>21</span>NOV -->
+            <!-- </div> -->
+            <!-- 文章標題 -->
+            <h2>NEWS</h2>
+            <!-- 類別 -->
+            <div class="cat">
+                皓雪糖煮 <a href="#">HS豆花那件小序事。豆花專賣店。</a>
+            </div>
+
+            <!-- 文章圖片 -->
+            <p>
+                <img src="./img/ad_img.jpg" alt="">
+            </p>
+            <!-- 文章內容 -->
+
+            <p>調配獨特的糖水 象徵著食客的心意和夢想</p>
+            <p>那甜蜜滋味靜靜地坐落在街角</p>
+            <p>每當夜幕降臨 舖仔裡的燈光柔和而溫暖 吸引著路過的行人</p>
+            <p>在每一次舌尖的碰撞中 都能感受到彼此的心跳和那份不可言喻的甜蜜</p>
+            <p>所有人的故事也隨著每一碗糖水慢慢流淌 分享著彼此 直到永遠</p>
+
+
+        </div>
+        <!-- 右側項目清單 -->
+        <div id="sidebar">
+
+            <!-- 清單圖片 -->
+            <p>
+                <img src="./img/right.jpg" alt="">
+            </p>
+
+
+            <!-- 文章分類清單 -->
+            <div class="menu">
+                <h3>皓雪糖煮</h3>
+                <ul>
+                    <li><a href="./about1.html">關於皓雪</a></li>
+                    <li><a href="./index.html">最新消息</a></li>
+                    <li><a href="./story1.html">品牌故事</a></li>
+                    <li><a href="./contact1.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <!-- 最新文章清單 -->
+            <div class="menu">
+                <h3>經典系列</h3>
+                <ul>
+                    <!-- <li><a href="#">熱銷商品</a></li> -->
+                    <!-- <li><a href="#">檔期活動</a></li> -->
+                    <li><a href="./menu1.html">傳說中的。古早</a></li>
+                    <li><a href="./menu2.html">不要鬧了。童趣</a></li>
+                    <li><a href="./menu3.html">加倍滿溢。幸福</a></li>
+                    <!-- <li><a href="#">聯絡我們</a></li> -->
+                </ul>
+            </div>
+
+
+             <!-- 清單圖片 -->
+             <p>
+                <img src="./img/beans.png" alt="">
+            </p>
+
+
+
+
+
+
+        </div>
+        <!-- 頁尾區 -->
+        <div id="footer">
+            <p>關於我 | 留言版 | 豆花團</p>
+            <p>SINCE 2024 首發創想</p>
+            <p>技術提供 COFFEETEACHER 。 網站架設 AKEMI</p>
+            <h4>Copyright &copy; HaoSnow Dessert Shop 皓雪糖水舖 All Rights Reserved.Designed by CYBERBIZ.</h4>
+            <!-- <h4>&copy; 2024 AKEMI 版權所有. All right reserved.</h4> -->
+
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
